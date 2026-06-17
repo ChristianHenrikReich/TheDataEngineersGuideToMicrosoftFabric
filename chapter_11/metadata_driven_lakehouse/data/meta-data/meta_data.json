@@ -1,0 +1,32 @@
+[
+    {
+        "source": "Files/data/Sales/Customers",
+        "format": "csv",
+        "destination": "dbo.sales_Customers",
+        "projected_columns": [
+            "CustomerID",
+            "FirstName",
+            "LastName"
+        ]
+    },
+    {
+        "source": "Files/data/Sales/Products",
+        "format": "parquet",
+        "destination": "dbo.sales_Products",
+        "projected_columns": []
+    },
+    {
+        "source": "Files/data/Sales/Transactions",
+        "format": "csv",
+        "destination": "dbo.sales_transactions",
+        "projected_columns": [],
+        "custom_transform": "enrich_transactions"
+    },
+    {
+        "source": "Files/data/Sales/Cow_Camera_Overviews",
+        "format": "image",
+        "destination": "dbo.sales_cow_camera_overviews",
+        "projected_columns": [],
+        "custom_transform": "count_cows_from_overview"
+    }
+]
