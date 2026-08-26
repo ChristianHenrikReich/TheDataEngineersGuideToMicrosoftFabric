@@ -1,17 +1,9 @@
-# AquaShack-Medallion
+# Metadata-Driven Lakehouse
 
-A pico-example of a meta-data driven lakehouse for Microsoft Fabric, forked from
-[AquaShack](https://github.com/ChristianHenrikReich/AquaShack).
+A concise example of a metadata-driven lakehouse for Microsoft Fabric using
+the classic **Bronze**, **Silver**, and **Gold** medallion layers.
 
-> **Status:** the upstream [AquaShack](https://github.com/ChristianHenrikReich/AquaShack)
-> project is under code freeze. AquaShack-Medallion is where I will be
-> implementing my ideas about building lakehouse solutions going forward.
-
-Two differences from the original:
-
-1. The three layers are renamed to the classic medallion names: **Bronze**,
-   **Silver**, and **Gold** (previously Landing, Base, Curated).
-2. The meta data schema supports a `custom_transform` property. When set, the
+The metadata schema supports a `custom_transform` property. When set, the
    Bronze to Silver stage dispatches to a named custom function instead of
    running the default dedupe + fill-nulls flow. This is the extension point
    for entities that need shaping the default flow does not cover.
@@ -34,10 +26,10 @@ Medallion architecture, three lakehouses:
 
 Notebooks:
 
-- `1_AquaShack_Bronze_To_Silver.ipynb` moves meta-data-described entities from
+- `1_Bronze_To_Silver.ipynb` moves meta-data-described entities from
   Bronze to Silver. Default flow is dedupe + fill nulls. If an entity has a
   `custom_transform` in the meta data, that function runs instead.
-- `2_AquaShack_Silver_To_Gold.ipynb` coordinates the Gold loaders.
+- `2_Silver_To_Gold.ipynb` coordinates the Gold loaders.
 - `3_*` and `4_*` load dimensions and facts into Gold.
 
 ## The `custom_transform` extension point
@@ -63,7 +55,7 @@ function in `data/meta-data/meta_data.json`:
 }
 ```
 
-And register the function in `notebooks/AquaShack_functions.ipynb`:
+And register the function in `notebooks/functions.ipynb`:
 
 ```python
 @register_custom_transform("enrich_transactions")
@@ -80,16 +72,16 @@ def enrich_transactions(df: DataFrame, meta_entity: dict) -> DataFrame:
 Signature contract: `(df, meta_entity) -> df`. The caller still handles the
 write, so all write policy (IDs, audit, mode, projection) stays in one place.
 
-Transform implementations live in `notebooks/AquaShack_custom_transforms.ipynb`.
-The Bronze to Silver notebook `%run`s `AquaShack_functions` first (so the
-registry and decorator exist) and then `AquaShack_custom_transforms` (so each
+Transform implementations live in `notebooks/custom_transforms.ipynb`.
+The Bronze to Silver notebook `%run`s `functions` first (so the
+registry and decorator exist) and then `custom_transforms` (so each
 `@register_custom_transform(...)` populates the registry) before the
 orchestration loop dispatches.
 
 ## Unstructured data and Microsoft AI Foundry
 
 The `custom_transform` hook is not limited to tabular cleanup. It is also how
-AquaShack handles **unstructured data** — things the default dedupe + fill
+The lakehouse example handles **unstructured data** — things the default dedupe + fill
 nulls flow cannot express — by reading files with a binary reader and calling
 an AI service to reduce each file to a row.
 
@@ -127,7 +119,7 @@ On the next Setup run:
 1. Cow camera PNGs are seeded into the bronze lakehouse.
 2. `meta_data.json` is seeded **with** the `count_cows_from_overview` entity.
 3. The key and endpoint are **stamped into the parameters cell** at the top
-   of `AquaShack_custom_transforms.ipynb` as it is imported into the
+   of `custom_transforms.ipynb` as it is imported into the
    workspace, so the transform can read them as module-level variables once
    `%run` pulls the notebook in.
 
@@ -146,7 +138,7 @@ the repo.
 
 ## Articles
 
-Same articles as the upstream project:
+Related articles:
 
 - [Delta and Parquet: Integer, GUID/UUID or SHA256 as ID?](https://medium.com/@christianhenrikreich/delta-and-parquet-integer-guid-uuid-or-sha256-as-id-67ba15b4437f)
 - [Spark SQL: Why the choice of language does not impact performance](https://medium.com/@christianhenrikreich/spark-sql-why-the-choice-of-language-doesnt-impact-performance-747ff3f854ae)
