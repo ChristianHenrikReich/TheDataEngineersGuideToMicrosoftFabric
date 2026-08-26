@@ -1,4 +1,4 @@
-# Metadata-Driven Lakehouse
+# medallion-lakehouse
 
 A concise example of a metadata-driven lakehouse for Microsoft Fabric using
 the classic **Bronze**, **Silver**, and **Gold** medallion layers.
@@ -26,10 +26,10 @@ Medallion architecture, three lakehouses:
 
 Notebooks:
 
-- `1_Bronze_To_Silver.ipynb` moves meta-data-described entities from
+- `1_medallion-lakehouse_Bronze_To_Silver.ipynb` moves meta-data-described entities from
   Bronze to Silver. Default flow is dedupe + fill nulls. If an entity has a
   `custom_transform` in the meta data, that function runs instead.
-- `2_Silver_To_Gold.ipynb` coordinates the Gold loaders.
+- `2_medallion-lakehouse_Silver_To_Gold.ipynb` coordinates the Gold loaders.
 - `3_*` and `4_*` load dimensions and facts into Gold.
 
 ## The `custom_transform` extension point
@@ -55,7 +55,7 @@ function in `data/meta-data/meta_data.json`:
 }
 ```
 
-And register the function in `notebooks/functions.ipynb`:
+And register the function in `notebooks/medallion-lakehouse_functions.ipynb`:
 
 ```python
 @register_custom_transform("enrich_transactions")
@@ -72,16 +72,16 @@ def enrich_transactions(df: DataFrame, meta_entity: dict) -> DataFrame:
 Signature contract: `(df, meta_entity) -> df`. The caller still handles the
 write, so all write policy (IDs, audit, mode, projection) stays in one place.
 
-Transform implementations live in `notebooks/custom_transforms.ipynb`.
-The Bronze to Silver notebook `%run`s `functions` first (so the
-registry and decorator exist) and then `custom_transforms` (so each
+Transform implementations live in `notebooks/medallion-lakehouse_custom_transforms.ipynb`.
+The Bronze to Silver notebook `%run`s `medallion-lakehouse_functions` first (so the
+registry and decorator exist) and then `medallion-lakehouse_custom_transforms` (so each
 `@register_custom_transform(...)` populates the registry) before the
 orchestration loop dispatches.
 
 ## Unstructured data and Microsoft AI Foundry
 
 The `custom_transform` hook is not limited to tabular cleanup. It is also how
-The lakehouse example handles **unstructured data** — things the default dedupe + fill
+medallion-lakehouse handles **unstructured data** — things the default dedupe + fill
 nulls flow cannot express — by reading files with a binary reader and calling
 an AI service to reduce each file to a row.
 
@@ -119,7 +119,7 @@ On the next Setup run:
 1. Cow camera PNGs are seeded into the bronze lakehouse.
 2. `meta_data.json` is seeded **with** the `count_cows_from_overview` entity.
 3. The key and endpoint are **stamped into the parameters cell** at the top
-   of `custom_transforms.ipynb` as it is imported into the
+   of `medallion-lakehouse_custom_transforms.ipynb` as it is imported into the
    workspace, so the transform can read them as module-level variables once
    `%run` pulls the notebook in.
 
