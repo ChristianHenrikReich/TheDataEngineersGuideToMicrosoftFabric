@@ -9,4 +9,6 @@ The section is holding resources and the recommendation by the book.
 ## Chapter 1
 ## Chapter 8
 
+## Chapter 10
+
 ## Chapter 16
