@@ -17,7 +17,7 @@ Tools mentioned:
 - **Azure Storage Explorer** https://azure.microsoft.com/en-us/products/storage/storage-explorer
 - **Git*** https://git-scm.com/ 
 
-* Git can be installed with all kinds of editors and tools, so you might already have it install. Git-scm is Git's homepage, and it is the one I uses to do a clean git installation. 
+*Git can be installed with all kinds of editors and tools, so you might already have it install. Git-scm is Git's homepage, and it is the one I uses to do a clean git installation. 
 
 ## Chapter 8
 
