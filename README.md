@@ -56,6 +56,16 @@ Books mentioned:
 
 - **In-Memory Analytics with Apache Arrow** by Matt Topol: https://learning.oreilly.com/library/view/in-memory-analytics-with/9781835461228/
 
+Examples:
+- [Chapter 8 examples](chapter_8/examples_chapter_8.ipynb)
+  - 8.4: Table maintinance
+  - 8.14: Salting in Spark
+  - 8.27: Read unstructured data (images) into dataframe
+  - 8.36: Ingest from API
+  - 8.38: Connect to SQL Endpoint with PyODBC using tokens
+  - 8-39: Connect to SQL Endpoint with Spark
+
+
 ## Chapter 10
 
 Books mentioned:
