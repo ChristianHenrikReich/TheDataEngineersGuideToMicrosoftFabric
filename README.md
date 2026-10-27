@@ -3,7 +3,7 @@ This is the companion repository for the book *The Data Engineer's Guide to Micr
 
 The purpose of this repository is to provide readers with access to code examples and supporting resources that are shown or referenced in the book, making it easier to explore the implementations.
 
-The repository focuses on non-trivial examples rather than simple code snippets intended for illustrative purposes.
+The repository focuses on non-trivial examples rather than simple code snippets intended for illustrative purposes. However, I might be able to add more on requests.
 
 The book can be acquired here:
 - https://learning.oreilly.com/library/view/the-data-engineers/0642572249151
