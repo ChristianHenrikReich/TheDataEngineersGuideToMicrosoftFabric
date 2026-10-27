@@ -2,8 +2,8 @@
 This is the repository for the book the Data Engineers Guide to Microsoft Fabric. The repository is suppose to hold examples and sources either shown or mention in the book.
 
 The book can be acquired here:
-- https://learning.oreilly.com/library/view/the-data-engineers/0642572249151/
-- https://learning.oreilly.com/library/view/the-data-engineers/0642572249151/
+- https://learning.oreilly.com/library/view/the-data-engineers/0642572249151
+- https://www.amazon.com/Data-Engineers-Guide-Microsoft-Fabric/dp/B0HGCS816C
 
 Else I do blog about related topics, however these are not found in the book:
 - https://christianhenrikreich.medium.com
@@ -31,6 +31,10 @@ Books mentioned:
 - **Analytics Engineering with Microsoft Fabric and Power BI** by Shabnam Watson and Nikola Ilic: https://learning.oreilly.com/library/view/analytics-engineering-with/9798341645868/
 
 ## Chapter 8
+
+Books mentioned:
+
+-- **In-Memory Analytics with Apache Arrow** by Matt Topol: https://learning.oreilly.com/library/view/in-memory-analytics-with/9781835461228/
 
 ## Chapter 10
 
