@@ -36,17 +36,19 @@ Books mentioned:
 
 ## Chapter 5 
 
-Samples:
-- 5.12: Mounting lakehouses with Python
-- 5.15: Connect to a Delta Lake on OneLake
-- 5.16: Connect to SQL Endpoint with Token Credentials
+Examples:
+- [Chapter 5 examples](chapter_6/examples_chapter_5.ipynb)
+  - 5.12: Mounting lakehouses with Python
+  - 5.15: Connect to a Delta Lake on OneLake
+  - 5.16: Connect to SQL Endpoint with Token Credentials
 
 ## Chapter 6
 
-Samples:
-- 6.3: Delta Lake protocal versions check
-- 6.9: Delta Lake auto compaction Spark session level
-- 6.10: Delta Lake auto compaction table level
+Examples:
+- [Chapter 6 examples](chapter_6/examples_chapter_6.ipynb)
+  - 6.3: Delta Lake protocal versions check
+  - 6.9: Delta Lake auto compaction Spark session level
+  - 6.10: Delta Lake auto compaction table level
 
 ## Chapter 8
 
