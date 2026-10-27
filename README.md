@@ -23,7 +23,7 @@ Tools mentioned:
   - SQL SQL Database Projects extension
 - **Azure Command-Line Interface (AZ CLI)**: https://learn.microsoft.com/en-us/cli/azure/
 - **Fabric-cli**: https://microsoft.github.io/fabric-cli/
-- **Fabruc-cicd**: https://microsoft.github.io/fabric-cicd/latest/
+- **Fabric-cicd**: https://microsoft.github.io/fabric-cicd/latest/
 - **Azure Storage Explorer** https://azure.microsoft.com/en-us/products/storage/storage-explorer
 - **Git*** https://git-scm.com/ 
 
@@ -46,7 +46,7 @@ Examples:
 
 Examples:
 - [Chapter 6 examples](chapter_6/examples_chapter_6.ipynb)
-  - 6.3: Delta Lake protocal versions check
+  - 6.3: Delta Lake protocol versions check
   - 6.9: Delta Lake auto compaction Spark session level
   - 6.10: Delta Lake auto compaction table level
 
