@@ -37,9 +37,10 @@ Books mentioned:
 ## Chapter 5 
 
 Samples:
-- Mounting lakehouses with Python
-- Connect to a Delta Lake on OneLake
-- Connect to SQL Endpoint with Token Credentials
+- 5.12: Mounting lakehouses with Python
+- 5.15: Connect to a Delta Lake on OneLake
+- 5.16: Connect to SQL Endpoint with Token Credentials
+
 
 ## Chapter 8
 
