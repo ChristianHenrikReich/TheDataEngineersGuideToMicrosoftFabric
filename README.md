@@ -37,7 +37,7 @@ Books mentioned:
 ## Chapter 5 
 
 Examples:
-- [Chapter 5 examples](chapter_6/examples_chapter_5.ipynb)
+- [Chapter 5 examples](chapter_5/examples_chapter_5.ipynb)
   - 5.12: Mounting lakehouses with Python
   - 5.15: Connect to a Delta Lake on OneLake
   - 5.16: Connect to SQL Endpoint with Token Credentials
