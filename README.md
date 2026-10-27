@@ -1,8 +1,14 @@
 # The Data Engineers Guide To Microsoft Fabric
-This is the repository for the book the Data Engineers Guide to Microsoft Fabric. The repository is suppose to elaborate on different topics in the book.
+This is the repository for the book the Data Engineers Guide to Microsoft Fabric. The repository is suppose to hold examples and sources either shown or mention in the book.
+
+The book can be acquired here:
+- https://learning.oreilly.com/library/view/the-data-engineers/0642572249151/
+- https://learning.oreilly.com/library/view/the-data-engineers/0642572249151/
+
+Else I do blog about related topics, however these are not found in the book:
+- https://christianhenrikreich.medium.com
 
 ## Chapter 1
-The chapter introduces you the book, and there some introduction to some of the tool. You don't have to install them all at once, or at all if you stick strictly to the Fabric Web UI
 
 Tools mentioned:
 - **Visual Studio Code**: https://code.visualstudio.com/
@@ -18,6 +24,11 @@ Tools mentioned:
 - **Git*** https://git-scm.com/ 
 
 *Git can be installed with all kinds of editors and tools, so you might already have it install. Git-scm is Git's homepage, and it is the one I uses to do a clean git installation. 
+
+## Chapter 4
+
+Books mentioned:
+- **Analytics Engineering with Microsoft Fabric and Power BI** by Shabnam Watson and Nikola Ilic: https://learning.oreilly.com/library/view/analytics-engineering-with/9798341645868/
 
 ## Chapter 8
 
