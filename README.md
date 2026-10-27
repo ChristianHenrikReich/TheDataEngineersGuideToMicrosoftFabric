@@ -1,5 +1,9 @@
 # The Data Engineers Guide To Microsoft Fabric
-This is the repository for the book the Data Engineers Guide to Microsoft Fabric. The repository is suppose to hold examples and sources either shown or mention in the book.
+This is the companion repository for the book *The Data Engineer's Guide to Microsoft Fabric*.
+
+The purpose of this repository is to provide readers with access to code examples and supporting resources that are shown or referenced in the book, making it easier to explore the implementations.
+
+The repository focuses on non-trivial examples rather than simple code snippets intended for illustrative purposes.
 
 The book can be acquired here:
 - https://learning.oreilly.com/library/view/the-data-engineers/0642572249151
@@ -29,6 +33,13 @@ Tools mentioned:
 
 Books mentioned:
 - **Analytics Engineering with Microsoft Fabric and Power BI** by Shabnam Watson and Nikola Ilic: https://learning.oreilly.com/library/view/analytics-engineering-with/9798341645868/
+
+## Chapter 5 
+
+Samples:
+- Mounting lakehouses with Python
+- Connect to a Delta Lake on OneLake
+- Connect to SQL Endpoint with Token Credentials
 
 ## Chapter 8
 
