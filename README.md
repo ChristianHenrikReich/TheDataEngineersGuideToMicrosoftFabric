@@ -34,8 +34,12 @@ Books mentioned:
 
 Books mentioned:
 
--- **In-Memory Analytics with Apache Arrow** by Matt Topol: https://learning.oreilly.com/library/view/in-memory-analytics-with/9781835461228/
+- **In-Memory Analytics with Apache Arrow** by Matt Topol: https://learning.oreilly.com/library/view/in-memory-analytics-with/9781835461228/
 
 ## Chapter 10
+
+Books mentioned:
+
+- **Real-Time Intelligence with Microsoft Fabric** by Johan Ludvig Brattås and Frank Geisler: https://learning.oreilly.com/library/view/real-time-intelligence-with/9781098178574/
 
 ## Chapter 16
