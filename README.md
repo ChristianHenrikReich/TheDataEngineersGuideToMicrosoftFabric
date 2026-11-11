@@ -12,11 +12,12 @@ The book can be acquired here:
 Else I do blog about related topics, however these are not found in the book:
 - https://christianhenrikreich.medium.com
 
-## Chapter 1
+## Chapter 1: Data Engineering in Microsoft Fabric
 
 Examples:
 - [Data builder](chapter_1/DataBuilder.ipynb)
   - Generate sample customers and orders tables with PySpark
+  - Load the saved tables into an existing gold Warehouse in the same workspace, overwriting dbo.customers and dbo.orders
 
 Tools mentioned:
 - **Visual Studio Code**: https://code.visualstudio.com/
@@ -33,12 +34,12 @@ Tools mentioned:
 
 *Git can be installed with all kinds of editors and tools, so you might already have it install. Git-scm is Git's homepage, and it is the one I uses to do a clean git installation. 
 
-## Chapter 4
+## Chapter 4: Workspaces
 
 Books mentioned:
 - **Analytics Engineering with Microsoft Fabric and Power BI** by Shabnam Watson and Nikola Ilic: https://learning.oreilly.com/library/view/analytics-engineering-with/9798341645868/
 
-## Chapter 5 
+## Chapter 5: Fabric Lakehouses
 
 Examples:
 - [Chapter 5 examples](chapter_5/examples_chapter_5.ipynb)
@@ -46,7 +47,7 @@ Examples:
   - 5.15: Connect to a Delta Lake on OneLake
   - 5.16: Connect to SQL Endpoint with Token Credentials
 
-## Chapter 6
+## Chapter 6: Delta Lake and Tables
 
 Examples:
 - [Chapter 6 examples](chapter_6/examples_chapter_6.ipynb)
@@ -54,7 +55,7 @@ Examples:
   - 6.9: Delta Lake auto compaction Spark session level
   - 6.10: Delta Lake auto compaction table level
 
-## Chapter 8
+## Chapter 8: Data Engineering with Lakehouses
 
 Books mentioned:
 
@@ -70,7 +71,7 @@ Examples:
   - 8-39: Connect to SQL Endpoint with Spark
 
 
-## Chapter 10
+## Chapter 10: Data Engineering with Warehouses
 
 Books mentioned:
 
@@ -81,19 +82,22 @@ Examples:
   - 10.7: Creating a restore point before loading a table
   - 10.10: Creating an external source
 
-## Chapter 12
+## Chapter 12: Real-Time Data Engineering
 
 Examples:
 - [Chapter 12 examples](chapter_12/examples_chapter_12.ipynb)
   - 12.7: Incremental bronze-to-silver processing with streaming stopping after batch
 
-## Chapter 13
+## Chapter 13: Lifecycle Management
 
 Examples:
+- [Chapter 13 examples](chapter_13/examples_chapter_13.ipynb)
+  - 13.11: A function to read functions and classes from a notebook stored as a .py file in a Git repository
+  - 13.12: A Python test script unit testing a function from a notebook item
 - [octo_merge_github.yaml](chapter_13/octo_merge/octo_merge_github.yaml)
 - [octo_merge_azure_devops.yaml](chapter_13/octo_merge/octo_merge_azure_devops.yaml)
 
-## Chapter 14
+## Chapter 14: Platform Observability
 
 Examples:
 - [Chapter 14 examples](chapter_14/examples_chapter_14.ipynb)
@@ -101,7 +105,7 @@ Examples:
   - 14.3: How to read CSV log files with Python and PySpark
   - 14.6: Measuring the quality of a table
 
-## Chapter 15
+## Chapter 15: Metadata-Driven Lakehouse Solutions
 
 Examples:
 - [Chapter 15 examples](chapter_15/examples_chapter_15.ipynb)
@@ -111,4 +115,4 @@ Examples:
   - 15.4: The main loop, which connects all parts of the engine
   - 15.5: The top notebook with a defined DAG calling runMultiple
 
-## Chapter 16
+## Chapter 16: Advanced and Related Topics
