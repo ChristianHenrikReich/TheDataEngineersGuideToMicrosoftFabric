@@ -1,16 +1,26 @@
-# The Data Engineers Guide To Microsoft Fabric
+# The Data Engineer's Guide to Microsoft Fabric
 This is the companion repository for the book *The Data Engineer's Guide to Microsoft Fabric*.
 
-The purpose of this repository is to provide readers with access to code examples and supporting resources that are shown or referenced in the book, making it easier to explore the implementations.
+It contains code examples and supporting resources shown or referenced in the book, making it easier to explore the implementations.
 
-The repository focuses on non-trivial examples rather than simple code snippets intended for illustrative purposes. However, I might be able to add more on requests.
+The repository focuses on non-trivial examples rather than short, illustrative snippets. Additional examples may be added on request.
 
-The book can be acquired here:
+Find the book here:
 - https://learning.oreilly.com/library/view/the-data-engineers/0642572249151
 - https://www.amazon.com/Data-Engineers-Guide-Microsoft-Fabric/dp/B0HGCS816C
 
-Else I do blog about related topics, however these are not found in the book:
+For additional articles on related topics beyond the book:
 - https://christianhenrikreich.medium.com
+
+## Getting started
+
+1. Download or clone this repository and choose an example from the chapter index below.
+2. For Fabric notebook examples, import the `.ipynb` file into a workspace on an active Fabric capacity. Attach your own default lakehouse where required; replace any saved lakehouse binding with your own.
+3. Use a Fabric Spark runtime compatible with the example. Warehouse writes require a runtime that supports the [Fabric Warehouse Spark connector's write API](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-data-warehouse-connector). Review imports and install any additional libraries in the notebook's Fabric Environment or your local Python environment, as appropriate.
+4. Review the book and notebook setup notes before running cells. Update workspace IDs, paths, endpoints, and other example configuration, and ensure you have permission to access the required items. Some cells illustrate local Python or SQL workflows rather than code to run unchanged in a Fabric Spark session.
+5. To generate sample data, run the [Chapter 1 data builder](chapter_1/DataBuilder.ipynb) in cell order. It creates 1 million customers and 5 million orders in the default lakehouse. The final cell also loads an existing Warehouse named `gold` in the same workspace as the notebook and its default lakehouse.
+
+**Warning:** Some examples overwrite tables or change existing resources. The data builder overwrites `customers` and `orders` in the default lakehouse and `gold.dbo.customers` and `gold.dbo.orders` in the Warehouse. Use a development workspace and review write operations before running them.
 
 ## Chapter 1: Data Engineering in Microsoft Fabric
 
@@ -25,14 +35,14 @@ Tools mentioned:
   - Microsoft Fabric
   - Microsoft Fabric MCP Server
   - SQL Server (mssql) extension
-  - SQL SQL Database Projects extension
+  - SQL Database Projects extension
 - **Azure Command-Line Interface (AZ CLI)**: https://learn.microsoft.com/en-us/cli/azure/
 - **Fabric-cli**: https://microsoft.github.io/fabric-cli/
 - **Fabric-cicd**: https://microsoft.github.io/fabric-cicd/latest/
-- **Azure Storage Explorer** https://azure.microsoft.com/en-us/products/storage/storage-explorer
-- **Git*** https://git-scm.com/ 
+- **Azure Storage Explorer**: https://azure.microsoft.com/en-us/products/storage/storage-explorer
+- **Git**: https://git-scm.com/
 
-*Git can be installed with all kinds of editors and tools, so you might already have it install. Git-scm is Git's homepage, and it is the one I uses to do a clean git installation. 
+Git may already be installed with your editor or other development tools. For a standalone installation, use the installer from Git's official website above.
 
 ## Chapter 4: Workspaces
 
@@ -63,13 +73,12 @@ Books mentioned:
 
 Examples:
 - [Chapter 8 examples](chapter_8/examples_chapter_8.ipynb)
-  - 8.4: Table maintinance
+  - 8.4: Table maintenance
   - 8.14: Salting in Spark
   - 8.27: Read unstructured data (images) into dataframe
   - 8.36: Ingest from API
   - 8.38: Connect to SQL Endpoint with PyODBC using tokens
-  - 8-39: Connect to SQL Endpoint with Spark
-
+  - 8.39: Connect to SQL Endpoint with Spark
 
 ## Chapter 10: Data Engineering with Warehouses
 
@@ -94,8 +103,12 @@ Examples:
 - [Chapter 13 examples](chapter_13/examples_chapter_13.ipynb)
   - 13.11: A function to read functions and classes from a notebook stored as a .py file in a Git repository
   - 13.12: A Python test script unit testing a function from a notebook item
-- [octo_merge_github.yaml](chapter_13/octo_merge/octo_merge_github.yaml)
-- [octo_merge_azure_devops.yaml](chapter_13/octo_merge/octo_merge_azure_devops.yaml)
+
+Pipeline templates:
+- [GitHub Actions octopus-merge template](chapter_13/octo_merge/octo_merge_github.yaml)
+- [Azure DevOps octopus-merge template](chapter_13/octo_merge/octo_merge_azure_devops.yaml)
+
+These are illustrative templates, not standalone deployment pipelines. They reference supporting deployment scripts and configuration that are not included in this repository; the Azure DevOps template also requires a Python preparation template. Supply these dependencies and configure authentication, target workspaces, environments, and PR triggers before use.
 
 ## Chapter 14: Platform Observability
 
@@ -114,5 +127,3 @@ Examples:
   - 15.3: The transform function for processing
   - 15.4: The main loop, which connects all parts of the engine
   - 15.5: The top notebook with a defined DAG calling runMultiple
-
-## Chapter 16: Advanced and Related Topics
