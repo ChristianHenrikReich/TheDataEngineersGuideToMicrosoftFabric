@@ -12,15 +12,6 @@ Find the book here:
 For additional articles on related topics beyond the book:
 - https://christianhenrikreich.medium.com
 
-## Getting started
-
-1. Download or clone this repository and choose an example from the chapter index below.
-2. For Fabric notebook examples, import the `.ipynb` file into a workspace on an active Fabric capacity. Attach your own default lakehouse where required; replace any saved lakehouse binding with your own.
-3. Use a Fabric Spark runtime compatible with the example. Warehouse writes require a runtime that supports the [Fabric Warehouse Spark connector's write API](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-data-warehouse-connector). Review imports and install any additional libraries in the notebook's Fabric Environment or your local Python environment, as appropriate.
-4. Review the book and notebook setup notes before running cells. Update workspace IDs, paths, endpoints, and other example configuration, and ensure you have permission to access the required items. Some cells illustrate local Python or SQL workflows rather than code to run unchanged in a Fabric Spark session.
-5. To generate sample data, run the [Chapter 1 data builder](chapter_1/DataBuilder.ipynb) in cell order. It creates 1 million customers and 5 million orders in the default lakehouse. The final cell also loads an existing Warehouse named `gold` in the same workspace as the notebook and its default lakehouse.
-
-**Warning:** Some examples overwrite tables or change existing resources. The data builder overwrites `customers` and `orders` in the default lakehouse and `gold.dbo.customers` and `gold.dbo.orders` in the Warehouse. Use a development workspace and review write operations before running them.
 
 ## Chapter 1: Data Engineering in Microsoft Fabric
 
