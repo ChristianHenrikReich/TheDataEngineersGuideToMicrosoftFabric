@@ -14,6 +14,10 @@ Else I do blog about related topics, however these are not found in the book:
 
 ## Chapter 1
 
+Examples:
+- [Data builder](chapter_1/DataBuilder.ipynb)
+  - Generate sample customers and orders tables with PySpark
+
 Tools mentioned:
 - **Visual Studio Code**: https://code.visualstudio.com/
   - Fabric Data Engineering VS Code extension
@@ -71,5 +75,40 @@ Examples:
 Books mentioned:
 
 - **Real-Time Intelligence with Microsoft Fabric** by Johan Ludvig Brattås and Frank Geisler: https://learning.oreilly.com/library/view/real-time-intelligence-with/9781098178574/
+
+Examples:
+- [Chapter 10 examples](chapter_10/examples_chapter_10.ipynb)
+  - 10.7: Creating a restore point before loading a table
+  - 10.10: Creating an external source
+
+## Chapter 12
+
+Examples:
+- [Chapter 12 examples](chapter_12/examples_chapter_12.ipynb)
+  - 12.7: Incremental bronze-to-silver processing with streaming stopping after batch
+
+## Chapter 13
+
+Examples:
+- [octo_merge_github.yaml](chapter_13/octo_merge/octo_merge_github.yaml)
+- [octo_merge_azure_devops.yaml](chapter_13/octo_merge/octo_merge_azure_devops.yaml)
+
+## Chapter 14
+
+Examples:
+- [Chapter 14 examples](chapter_14/examples_chapter_14.ipynb)
+  - 14.2: Setting up a logger in Python
+  - 14.3: How to read CSV log files with Python and PySpark
+  - 14.6: Measuring the quality of a table
+
+## Chapter 15
+
+Examples:
+- [Chapter 15 examples](chapter_15/examples_chapter_15.ipynb)
+  - 15.1: Basic example of metadata in JSON
+  - 15.2: The reader function
+  - 15.3: The transform function for processing
+  - 15.4: The main loop, which connects all parts of the engine
+  - 15.5: The top notebook with a defined DAG calling runMultiple
 
 ## Chapter 16
